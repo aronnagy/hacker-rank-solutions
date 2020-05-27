@@ -16,7 +16,6 @@ function sockMerchant($n, $ar) {
         }
             $pairs = floor($pairs/2);
             $sum_pairs += $pairs;
-            echo "WE HAD: $pairs PAIR \n";
     }
     if(bcmod($sum_pairs,2)==0){
         return $sum_pairs/2-1;}
