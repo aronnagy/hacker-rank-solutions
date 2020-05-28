@@ -14,20 +14,8 @@ function diagonalDifference($arr) {
     {
         for($j=0; $j<count($arr); $j++)
         {
-            if($i == $j)
-            {
-                $primary_diagonal += $arr[$i][$j];
-            }
-        }
-    }
-    for($i=count($arr)-1; $i>-1; $i--)
-    {
-        for($j=0; $j<count($arr); $j++)
-        {
-               if(abs($i-2) == $j)
-               {
-                   $secondary_diagonal += $arr[abs($i)][$j];
-               }
+            if($i == $j) $primary_diagonal += $arr[$i][$j];
+            if ($i == count($arr) - $j - 1) $secondary_diagonal += $arr[$i][$j]; 
         }
     }
     return abs($primary_diagonal - $secondary_diagonal);
